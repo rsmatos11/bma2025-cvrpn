@@ -1,0 +1,71 @@
+prologues := 3;
+outputtemplate := "%j.mps";
+% Sizes: edges of the polygons, routes, visit points and depot
+edgewidth := 0.3pt;
+routewidth := 0.5pt;
+visitpointsize := 1.5pt;
+depotsize := 2.5pt;
+% Colors of the routes and of the depot
+color routecolor[], depotcolor;
+routecolor1 := (0.1647,0.4706,0.8392);
+routecolor2 := (0.9216,0.4078,0.2039);
+routecolor3 := (0.1059,0.6863,0.4784);
+routecolor4 := (0.9294,0.6314,0.0000);
+routecolor5 := (0.9098,0.4824,0.6431);
+routecolor6 := (0.0000,0.5137,0.0000);
+routecolor7 := (0.2902,0.2275,0.6549);
+routecolor8 := (0.8902,0.2863,0.2824);
+depotcolor := black;
+% Tones: fraction of the color of a route in the filling of the polygons (mixed with white) and in their edges and visit points (mixed with black)
+lighttone := 0.30;
+darktone := 0.65;
+% Colors of the filling of the polygons, of their edges and of the visit points, for each route
+color polygonfill[], polygonedge[], visitpoint[];
+for k = 1 upto 8:
+  polygonfill[k] := lighttone[white,routecolor[k]];
+  polygonedge[k] := darktone*routecolor[k];
+  visitpoint[k] := darktone*routecolor[k];
+endfor
+beginfig(1);
+u = 6.0cm;
+fill (-0.464363u,0.836559u)--(-0.488882u,0.884323u)--(-0.568988u,0.720804u)--(-0.524013u,0.638525u)--(-0.422869u,0.690449u)--cycle withcolor polygonfill1;
+fill (-0.571402u,0.287996u)--(-0.621366u,0.371172u)--(-0.787362u,0.346250u)--(-0.637531u,0.159594u)--(-0.544464u,0.219458u)--cycle withcolor polygonfill1;
+fill (-0.142816u,-0.315677u)--(-0.208805u,-0.269874u)--(-0.395351u,-0.466900u)--(-0.303731u,-0.436978u)--(-0.138065u,-0.483770u)--cycle withcolor polygonfill1;
+fill (-0.073316u,0.255157u)--(-0.281189u,0.216080u)--(-0.269496u,0.083533u)--(-0.163892u,0.014097u)--cycle withcolor polygonfill1;
+fill (0.772444u,-0.714412u)--(0.722462u,-0.655250u)--(0.675744u,-0.654457u)--(0.569546u,-0.720126u)--(0.595787u,-0.761759u)--(0.655304u,-0.884323u)--cycle withcolor polygonfill2;
+fill (0.184556u,-0.518689u)--(0.093331u,-0.472243u)--(0.000365u,-0.469974u)--(-0.072875u,-0.487404u)--(-0.077061u,-0.658232u)--(0.072636u,-0.627756u)--cycle withcolor polygonfill2;
+fill (0.997163u,0.645006u)--(0.996939u,0.700466u)--(0.948100u,0.572693u)--(1.000000u,0.527678u)--cycle withcolor polygonfill3;
+fill (0.340320u,0.083077u)--(0.376457u,0.020127u)--(0.469388u,-0.029736u)--cycle withcolor polygonfill2;
+fill (0.663687u,-0.230933u)--(0.622837u,-0.198894u)--(0.536026u,-0.241363u)--(0.397934u,-0.232133u)--(0.397470u,-0.384399u)--cycle withcolor polygonfill2;
+fill (0.828223u,0.475841u)--(0.746127u,0.460796u)--(0.714452u,0.398423u)--(0.954247u,0.281622u)--cycle withcolor polygonfill3;
+fill (-0.731135u,-0.207869u)--(-0.790204u,-0.216130u)--(-0.967350u,-0.287630u)--(-1.000000u,-0.344676u)--(-0.832059u,-0.399977u)--(-0.737761u,-0.411460u)--cycle withcolor polygonfill1;
+draw (-0.464363u,0.836559u)--(-0.488882u,0.884323u)--(-0.568988u,0.720804u)--(-0.524013u,0.638525u)--(-0.422869u,0.690449u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge1;
+draw (-0.571402u,0.287996u)--(-0.621366u,0.371172u)--(-0.787362u,0.346250u)--(-0.637531u,0.159594u)--(-0.544464u,0.219458u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge1;
+draw (-0.142816u,-0.315677u)--(-0.208805u,-0.269874u)--(-0.395351u,-0.466900u)--(-0.303731u,-0.436978u)--(-0.138065u,-0.483770u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge1;
+draw (-0.073316u,0.255157u)--(-0.281189u,0.216080u)--(-0.269496u,0.083533u)--(-0.163892u,0.014097u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge1;
+draw (0.772444u,-0.714412u)--(0.722462u,-0.655250u)--(0.675744u,-0.654457u)--(0.569546u,-0.720126u)--(0.595787u,-0.761759u)--(0.655304u,-0.884323u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge2;
+draw (0.184556u,-0.518689u)--(0.093331u,-0.472243u)--(0.000365u,-0.469974u)--(-0.072875u,-0.487404u)--(-0.077061u,-0.658232u)--(0.072636u,-0.627756u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge2;
+draw (0.997163u,0.645006u)--(0.996939u,0.700466u)--(0.948100u,0.572693u)--(1.000000u,0.527678u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge3;
+draw (0.340320u,0.083077u)--(0.376457u,0.020127u)--(0.469388u,-0.029736u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge2;
+draw (0.663687u,-0.230933u)--(0.622837u,-0.198894u)--(0.536026u,-0.241363u)--(0.397934u,-0.232133u)--(0.397470u,-0.384399u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge2;
+draw (0.828223u,0.475841u)--(0.746127u,0.460796u)--(0.714452u,0.398423u)--(0.954247u,0.281622u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge3;
+draw (-0.731135u,-0.207869u)--(-0.790204u,-0.216130u)--(-0.967350u,-0.287630u)--(-1.000000u,-0.344676u)--(-0.832059u,-0.399977u)--(-0.737761u,-0.411460u)--cycle withpen pencircle scaled edgewidth withcolor polygonedge1;
+draw (0.095227u,0.308020u)--(0.184556u,-0.518689u)--(0.569546u,-0.720126u)--(0.440581u,-0.234984u)--(0.369625u,0.032029u)--(0.095227u,0.308020u) withpen pencircle scaled routewidth withcolor routecolor2;
+draw (0.095227u,0.308020u)--(0.948100u,0.572693u)--(0.746127u,0.460796u)--(0.095227u,0.308020u) withpen pencircle scaled routewidth withcolor routecolor3;
+draw (0.095227u,0.308020u)--(-0.163892u,0.014097u)--(-0.208805u,-0.269874u)--(-0.731135u,-0.207869u)--(-0.598679u,0.333404u)--(-0.524013u,0.638525u)--(0.095227u,0.308020u) withpen pencircle scaled routewidth withcolor routecolor1;
+drawdot (0.184556u,-0.518689u) withpen pencircle scaled visitpointsize withcolor visitpoint2;
+drawdot (0.569546u,-0.720126u) withpen pencircle scaled visitpointsize withcolor visitpoint2;
+drawdot (0.440581u,-0.234984u) withpen pencircle scaled visitpointsize withcolor visitpoint2;
+drawdot (0.369625u,0.032029u) withpen pencircle scaled visitpointsize withcolor visitpoint2;
+drawdot (0.948100u,0.572693u) withpen pencircle scaled visitpointsize withcolor visitpoint3;
+drawdot (0.746127u,0.460796u) withpen pencircle scaled visitpointsize withcolor visitpoint3;
+drawdot (-0.163892u,0.014097u) withpen pencircle scaled visitpointsize withcolor visitpoint1;
+drawdot (-0.208805u,-0.269874u) withpen pencircle scaled visitpointsize withcolor visitpoint1;
+drawdot (-0.731135u,-0.207869u) withpen pencircle scaled visitpointsize withcolor visitpoint1;
+drawdot (-0.598679u,0.333404u) withpen pencircle scaled visitpointsize withcolor visitpoint1;
+drawdot (-0.524013u,0.638525u) withpen pencircle scaled visitpointsize withcolor visitpoint1;
+drawdot (0.095227u,0.308020u) withpen pencircle scaled depotsize withcolor depotcolor;
+mrg := 0.1cm;
+setbounds currentpicture to (llcorner currentpicture - (mrg,mrg))--(lrcorner currentpicture + (mrg,-mrg))--(urcorner currentpicture + (mrg,mrg))--(ulcorner currentpicture + (-mrg,mrg))--cycle;
+endfig;
+end;

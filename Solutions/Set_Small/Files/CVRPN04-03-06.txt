@@ -1,0 +1,12 @@
+instance = CVRPN04-03-06
+total distance = 1.661411956741
+number of routes = 1
+
+route 1
+number of clients = 3
+length = 1.661411956741
+demand = 26
+client                x                y
+     1  -0.047039673084  -0.195784676674
+     2  -0.003363165965  -0.524729497348
+     3   0.299060913215   0.188510705521
