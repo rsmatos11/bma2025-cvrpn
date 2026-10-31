@@ -15,24 +15,37 @@ Web page with the table of results: https://rsmatos11.github.io/bma2025-cvrpn/
 | Folder | Content |
 |--------|---------|
 | `Instances/` | small-, medium- and large-scale instances, and the instances used in the calibration |
-| `Solutions/` | solutions found by the proposed method: `Files/` (text) and `Figures/` (PDF) of each set |
+| `Solutions/` | solutions found by the proposed method, in the same organization: `Files/` (text) and `Figures/` (PDF) of each set |
 | `Codes/` | source code of the proposed method and of the CPLEX models (see [`Codes/README.txt`](Codes/README.txt)) |
 | `index.html` | source of the web page: table with links to the instances and solutions |
 
 ## Instances
 
+```
+Instances/
+├── Calibration/
+├── Small-Medium/
+│   ├── Set_Small/
+│   └── Set_Medium/
+└── Large/
+    ├── a01/
+    │   ├── Set_A/  Set_B/  Set_E/  Set_F/  Set_M/  Set_P/  Set_Tai/
+    ├── a05/
+    └── a10/
+```
+
 | Set | Instances | Clients | Type |
 |-----|-----------|---------|------|
 | `Set_Small` | 65 | 3 to 15 | small-scale |
 | `Set_Medium` | 69 | 16 to 60 | medium-scale |
-| `Set_A` | 81 | 31 to 79 | large-scale |
-| `Set_B` | 69 | 30 to 77 | large-scale |
-| `Set_E` | 33 | 21 to 100 | large-scale |
-| `Set_F` | 9 | 44 to 134 | large-scale |
-| `Set_M` | 15 | 100 to 199 | large-scale |
-| `Set_P` | 72 | 15 to 100 | large-scale |
-| `Set_Tai` | 39 | 75 to 385 | large-scale |
-| `Set_Calibration` | 15 | 80 to 200 | calibration |
+| `Set_A` | 27 per area | 31 to 79 | large-scale |
+| `Set_B` | 23 per area | 30 to 77 | large-scale |
+| `Set_E` | 11 per area | 21 to 100 | large-scale |
+| `Set_F` | 3 per area | 44 to 134 | large-scale |
+| `Set_M` | 5 per area | 100 to 199 | large-scale |
+| `Set_P` | 24 per area | 15 to 100 | large-scale |
+| `Set_Tai` | 13 per area | 75 to 385 | large-scale |
+| `Calibration` | 15 | 80 to 200 | calibration |
 
 ### Origin
 
@@ -75,11 +88,11 @@ depot: this instance has 31 clients.
 
 ## Solutions
 
-The folder `Solutions/` has one solution for each small- and medium-scale
-instance and for each large-scale instance with suffix `_a01`. There are no
-solutions for the versions `_a05` and `_a10`, nor for the calibration
-instances. The solution files of the large-scale sets have no suffix:
-`Solutions/Set_A/Files/A-n32-k5.txt` is the solution of `A-n32-k5_a01`.
+The folder `Solutions/` follows the organization of `Instances/`, and each
+solution has the name of its instance: for example,
+`Solutions/Large/a01/Set_A/Files/A-n32-k5_a01.txt` is the solution of
+`Instances/Large/a01/Set_A/A-n32-k5_a01.txt`. There are no solutions for the
+calibration instances.
 
 The MetaPost sources of the figures of the small- and medium-scale solutions
 are in `Figures/mpfiles/`.
