@@ -78,8 +78,6 @@ are in `Figures/mpfiles/`.
 
 ### Solution format
 
-Small- and medium-scale instances:
-
 ```
 instance = CVRPN01-03-03
 number of clients = 3
@@ -102,20 +100,3 @@ inside a route refers only to that route; the depot is not counted as a
 client. The lines after `client` give the visit points in visiting order.
 Each route starts and ends at the depot, and `length` includes these two
 segments. Clients are numbered as in the instance file.
-
-Large-scale instances:
-
-```
- nroutes = 5
-
- RouteID =            1
- Route number of clients =            8
- Route length =    223.05943659653158
- Route demand =           98
- Sequence =           14          28          11   ...
- Visit points =    61.943098673774095        57.642125536176550   ...
-```
-
-`Sequence` gives the clients in visiting order and `Visit points` gives the
-coordinates x y of their visit points, in the same order. The routes follow
-the same conventions as above.
