@@ -1,4 +1,5 @@
 instance = CVRPN09-04-06
+number of clients = 4
 depot = 0.000000000000 0.000000000000
 total distance = 2.878929606693
 number of routes = 1
