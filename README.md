@@ -34,6 +34,14 @@ Web page with the table of results: https://rsmatos11.github.io/bma2025-cvrpn/
 | `Set_Tai` | 39 | 75 to 385 | large-scale |
 | `Set_Calibration` | 15 | 80 to 200 | calibration |
 
+### Origin
+
+The small- and medium-scale instances were generated as described in Section
+5.2 of the paper, following the scheme of Laporte (1984). The large-scale
+instances were derived from the CVRP instances of the same names in CVRPLib.
+The calibration instances were generated following Uchoa et al. (2017), with 5
+instances for each suffix `_a01`, `_a05` and `_a10`.
+
 ### File names
 
 Small- and medium-scale instances are named `CVRPN<id>-<c>-<v>`, where `c` is
@@ -41,12 +49,12 @@ the number of clients and `v` is the maximum number of vertices of a polygon.
 For example, `CVRPN100-38-10` has 38 clients and polygons with at most 10
 vertices.
 
-The large-scale instances are based on the classic CVRP benchmark instances of
-the same names, and each one has three versions, with suffixes `_a01`, `_a05`
-and `_a10`. The three versions have the same capacity, demands and depot; the
-polygons of `_a05` and `_a10` have, respectively, 5 and 10 times the area of
-the corresponding polygons of `_a01`. In names such as `A-n32-k5`, the number
-after `n` counts the depot: this instance has 31 clients.
+Each large-scale instance has three versions, with the same capacity, demands
+and depot. The suffixes `_a01`, `_a05` and `_a10` correspond to 0.1%, 0.5% and
+1.0%: the larger square of each client, inside which its polygon is generated,
+has that percentage of the area of the smallest rectangle containing the depot
+and the clients. In names such as `A-n32-k5`, the number after `n` counts the
+depot: this instance has 31 clients.
 
 ### Instance format
 
