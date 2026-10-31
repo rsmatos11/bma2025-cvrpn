@@ -108,3 +108,13 @@ inside a route refers only to that route; the depot is not counted as a
 client. The lines after `client` give the visit points in visiting order.
 Each route starts and ends at the depot, and `length` includes these two
 segments. Clients are numbered as in the instance file.
+
+## References
+
+- CVRPLIB. Capacitated Vehicle Routing Problem Library.
+  https://galgos.inf.puc-rio.br/cvrplib/
+- G. Laporte, M. Desrochers, Y. Nobert. Two exact algorithms for the
+  distance-constrained vehicle routing problem. Networks 14(1):161–172, 1984.
+- E. Uchoa, D. Pecin, A. Pessoa, M. Poggi, T. Vidal, A. Subramanian. New
+  benchmark instances for the capacitated vehicle routing problem. European
+  Journal of Operational Research 257(3):845–858, 2017.
