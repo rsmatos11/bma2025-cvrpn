@@ -1,4 +1,5 @@
 instance = CVRPN57-14-04
+depot = 0.000000000000 0.000000000000
 total distance = 7.524322622753
 number of routes = 3
 
