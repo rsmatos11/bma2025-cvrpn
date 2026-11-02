@@ -25,7 +25,8 @@ Files
     dijkstra.f90                 visit points restricted to the vertices of the polygons
     solution.f90                 solutions and figures of the solutions
     instance.f90                 reading of the instances
-    mygeometry.f90               geometric routines
+    mygeometry.f90               geometric routines (GNU LGPL v3; see
+                                 LICENSE-LGPL.txt and LICENSE-GPL.txt)
     statistics.f90               counters and records of the runs
     drand.f90                    random number generator
     compilegvns.sh               compilation

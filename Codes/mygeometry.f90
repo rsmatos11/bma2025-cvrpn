@@ -2,6 +2,7 @@
 ! Modified by the authors of this repository: segments_int_2d,
 ! lines_imp_int_2d, r8mat_solve, line_imp_is_degenerate_2d and
 ! polygon_contains_point_2d.
+! Distributed under the GNU LGPL v3: see LICENSE-LGPL.txt and LICENSE-GPL.txt.
 
 subroutine segments_int_2d ( p1, p2, q1, q2, flag, r )
   
