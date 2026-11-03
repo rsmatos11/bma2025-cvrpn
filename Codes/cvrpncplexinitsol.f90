@@ -4,7 +4,7 @@ module cvrpncplexinitsol
   use instance, only: instance_type,CreateInstance,DeleteInstance
   use solution, only: solution_type,CreateSolution,DeleteSolution,CopySolution
   use statistics, only: statistics_type,CreateStatistics
-  use constructiveheuristcs, only: CW,NN,Barycenters
+  use constructiveheuristics, only: CW,NN,Barycenters
 
   implicit none
 

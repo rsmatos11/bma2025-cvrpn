@@ -25,7 +25,7 @@ EXEC="cvrpngvns"
 # executable. The files must be given in the order of the dependencies
 # between the modules. If the compilation fails, the script stops.
 gfortran -O3 -Wall drand.f90 mygeometry.f90 statistics.f90 instance.f90 solution.f90 dijkstra.f90 \
-         blockcoordinatedescent.f90 constructiveheuristcs.f90 neighborhoods.f90 metaheuristics.f90 \
+         blockcoordinatedescent.f90 constructiveheuristics.f90 neighborhoods.f90 metaheuristics.f90 \
          master.f90 -o "$EXEC" || { rm -f *.mod; exit 1; }
 
 # Remove the module files (.mod) created by the compilation

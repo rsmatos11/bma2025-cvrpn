@@ -1,4 +1,4 @@
-module constructiveheuristcs
+module constructiveheuristics
 
   use instance, only: instance_type
   use solution, only: solution_type
@@ -436,4 +436,4 @@ contains
     
   end subroutine dswap
 
-end module constructiveheuristcs
+end module constructiveheuristics

@@ -20,7 +20,7 @@ Files
     master.f90                   main program
     metaheuristics.f90           GVNS
     neighborhoods.f90            neighborhoods of the local search and shake
-    constructiveheuristcs.f90    constructive heuristics (CW and NN)
+    constructiveheuristics.f90   constructive heuristics (CW and NN)
     blockcoordinatedescent.f90   BCD for the visit points of a route
     dijkstra.f90                 visit points restricted to the vertices of the polygons
     solution.f90                 solutions and figures of the solutions

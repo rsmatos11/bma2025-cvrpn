@@ -45,7 +45,7 @@ mkdir -p "$OUTDIR"
 # the order of their dependencies. The '|| exit 1' ensures the script
 # stops if compilation fails.
 for module in drand mygeometry statistics instance solution dijkstra \
-              blockcoordinatedescent constructiveheuristcs cvrpncplexinitsol; do
+              blockcoordinatedescent constructiveheuristics cvrpncplexinitsol; do
     gfortran -c -O3 -J"$OUTDIR" -o "$OUTDIR"/$module.o $module.f90 || exit 1
 done
 

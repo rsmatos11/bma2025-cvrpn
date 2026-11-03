@@ -4,7 +4,7 @@ program master
   use solution, only: solution_type,CreateSolution,DeleteSolution,CopySolution,drawsol
   use statistics, only: statistics_type,CreateStatistics,CleanStatistics
   use dijkstra, only: DijkstraRoute
-  use constructiveheuristcs, only: CW,NN,Barycenters
+  use constructiveheuristics, only: CW,NN,Barycenters
   use blockcoordinatedescent, only: BCD
   use neighborhoods, only: Neighbor,Shake
   use metaheuristics, only: GVNS
