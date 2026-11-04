@@ -1,5 +1,5 @@
-CODES FOR THE CVRPN (CAPACITATED VEHICLE ROUTING PROBLEM WITH NEIGHBORHOODS)
-============================================================================
+CODES FOR THE CVRPN (CAPACITATED VEHICLE ROUTING PROBLEM WITH POLYGONAL NEIGHBORHOODS)
+======================================================================================
 
 This folder contains the codes of the two methods used in the paper:
 
@@ -42,8 +42,8 @@ Files
     compilecplex.sh              compilation
 
 
-Method (GVNS)
--------------
+Method (GVNS-BCD)
+-----------------
 
 Compilation (requires gfortran):
 
@@ -51,7 +51,7 @@ Compilation (requires gfortran):
 
 Usage:
 
-    ./cvrpngvns instance.dat otype rmax norder qmax flip randroutes tlim nrungvns
+    ./cvrpngvns instance.txt otype rmax norder qmax flip randroutes tlim nrungvns
 
   otype       B = best improvement, F = first improvement
   rmax        maximum number of arcs or elements removed in the neighborhoods
@@ -69,7 +69,7 @@ Usage:
 
 The configuration used in the paper (selected by the calibration) is
 
-    ./cvrpngvns instance.dat B 3 3 5 true false tlim 10
+    ./cvrpngvns instance.txt B 3 3 5 true false tlim 10
 
 with tlim = 60 for the small-scale instances and 1200 for the other ones.
 
@@ -99,7 +99,7 @@ Compilation (Linux; requires CPLEX, CGAL, Boost, GMP and MPFR):
 
 Usage:
 
-    ./cvrpncplexmodels instance.dat [--model 20|26] [--start none|warm|fixed]
+    ./cvrpncplexmodels instance.txt [--model 20|26] [--start none|warm|fixed]
 
   --model 20     the MIQCP model of the paper, models (2)-(20)
   --model 26     the same model with the additional constraints,
