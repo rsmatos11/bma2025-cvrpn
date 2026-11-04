@@ -94,8 +94,7 @@ solution has the name of its instance: for example,
 `Instances/Large/a01/Set_A/A-n32-k5_a01.txt`. There are no solutions for the
 calibration instances.
 
-The MetaPost sources of the figures of the small- and medium-scale solutions
-are in `Figures/mpfiles/`.
+The MetaPost sources of the figures are in `Figures/mpfiles/`.
 
 ### Solution format
 

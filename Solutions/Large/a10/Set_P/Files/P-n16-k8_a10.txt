@@ -1,0 +1,68 @@
+instance = P-n16-k8_a10
+number of clients = 15
+depot = 30.000000000000 40.000000000000
+total distance = 412.212329302253
+number of routes = 8
+
+route 1
+number of clients = 1
+length = 23.117834217600
+demand = 19
+client                x                y
+     1  35.578227820623  50.123830258817
+
+route 2
+number of clients = 2
+length = 65.089138307974
+demand = 34
+client                x                y
+    13  56.358282642426  49.371096043936
+     8  55.619976224689  56.156661269016
+
+route 3
+number of clients = 2
+length = 52.400316120510
+demand = 30
+client                x                y
+     4  29.131357651049  60.496320890130
+    11  28.595608645564  66.159480873629
+
+route 4
+number of clients = 1
+length = 38.495942618965
+demand = 30
+client                x                y
+     2  47.186632950067  48.666259133578
+
+route 5
+number of clients = 1
+length = 20.491015873422
+demand = 31
+client                x                y
+     6  40.234755115531  40.469276684190
+
+route 6
+number of clients = 3
+length = 61.716037935727
+demand = 33
+client                x                y
+    10  40.324278026646  58.130146083358
+    12  41.579433846780  66.223222361948
+    15  38.389654766231  67.846916723810
+
+route 7
+number of clients = 3
+length = 86.728837122938
+demand = 35
+client                x                y
+     5  51.110421566312  34.681085810119
+     9  60.096353780224  42.631180907439
+     3  51.491723094089  62.617941744134
+
+route 8
+number of clients = 2
+length = 64.173207105117
+demand = 34
+client                x                y
+    14  57.260601663338  28.026488313677
+     7  51.952675720012  39.270813723630
