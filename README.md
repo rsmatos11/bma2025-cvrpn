@@ -28,10 +28,9 @@ Instances/
 │   ├── Set_Small/
 │   └── Set_Medium/
 └── Large/
-    ├── a01/
-    │   ├── Set_A/  Set_B/  Set_E/  Set_F/  Set_M/  Set_P/  Set_Tai/
-    ├── a05/
-    └── a10/
+    ├── a01/    Set_A/  Set_B/  Set_E/  Set_F/  Set_M/  Set_P/  Set_Tai/
+    ├── a05/    (the same sets)
+    └── a10/    (the same sets)
 ```
 
 | Set | Instances | Clients | Type |
